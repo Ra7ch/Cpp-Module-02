@@ -1,3 +1,6 @@
+#ifndef __FIXED_HPP__
+#define __FIXED_HPP__
+
 #include <iostream>
 #include <cmath>
 
@@ -35,6 +38,9 @@ public:
     // Member function to convert value to int.
     int toInt() const;
 
-    // Overload of the insertion (<<) operator
-    friend std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
 };
+
+// Overload of the insertion (<<) operator
+std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
+
+#endif

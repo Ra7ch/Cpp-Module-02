@@ -59,7 +59,7 @@ Fixed Fixed::operator-(const Fixed& other) const { return Fixed(toFloat() - othe
 Fixed Fixed::operator*(const Fixed& other) const { return Fixed(toFloat() * other.toFloat()); }
 Fixed Fixed::operator/(const Fixed& other) const {
     if (other.toFloat() == 0) {
-        std::cout << "Cant divide on 0." << std::endl;
+        std::cout << "Cant divide on ";
         return (0);
     }
     return Fixed(toFloat() / other.toFloat());

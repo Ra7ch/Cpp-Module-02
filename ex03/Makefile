@@ -1,13 +1,14 @@
 SRCS	= main.cpp Fixed.cpp Point.cpp bsp.cpp
 OBJS	= ${SRCS:.cpp=.o}
-CFLAGS	= -Wall -Wextra -Werror -std=c++98
+CXXFLAGS= -Wall -Wextra -Werror -std=c++98
 RM		= rm -rf
 NAME	= bsp
+CXX		= c++
 
 all	: ${NAME}
 
 ${NAME} : ${OBJS}
-	c++ ${CFLAGS} ${SRCS} -o ${NAME}
+	${CXX} ${CXXFLAGS} ${SRCS} -o ${NAME}
 
 clean :
 	${RM} ${OBJS}

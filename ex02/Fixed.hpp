@@ -1,3 +1,6 @@
+#ifndef __FIXED_HPP__
+#define __FIXED_HPP__
+
 #include <iostream>
 #include <cmath>
 
@@ -63,6 +66,9 @@ public:
     static Fixed& max(Fixed& a, Fixed& b);
     static const Fixed& max(const Fixed& a, const Fixed& b);
 
-    // Overload of the insertion (<<) operator
-    friend std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
 };
+
+// Overload of the insertion (<<) operator
+std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
+
+#endif
